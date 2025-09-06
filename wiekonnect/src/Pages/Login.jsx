@@ -1,4 +1,5 @@
 import { FaArrowRight, FaGoogle, FaApple } from "react-icons/fa";
+import Registration from "./Registration";
 
 const Login = () => {
     return (
@@ -19,16 +20,16 @@ const Login = () => {
                         <input 
                         type="email"
                         name="email"
-                        placeholder="email"
-                        className="w-full border-b-2 text-gray-400 border-gray-200 focus:border-2 focus:border-pink-700 focus:outline-none py-2"
+                        placeholder="Email"
+                        className="w-full border-b-2 text-gray-200 border-gray-200 focus:border-2 focus:border-pink-700 focus:outline-none px-3 py-2"
                         />
                     </div>    
                     <div>
                         <input 
                         type="password"
                         name="password"
-                        placeholder="password"
-                        className="w-full border-b-2 text-gray-400 border-gray-200 focus:border-2 focus:border-pink-700 focus:outline-none py-2"
+                        placeholder="Password"
+                        className="w-full border-b-2 text-gray-200 border-gray-200 focus:border-2 focus:border-pink-700 focus:outline-none px-3 py-2"
                         />
                     </div>    
                 </div>
@@ -44,14 +45,13 @@ const Login = () => {
         </div>
         <div className="flex flex-col justify-center items-center gap-3 mt-3 p-5">
            <p
-            to="/Registration"
             className="text-gray-500 text-sm">
-           Don't have an account? <a className="text-white">Create Account</a></p> 
+           Don't have an account? <a href="/Registration" className="text-white">Create Account</a></p> 
             <a
-             to="/forgetPassowrd"
+             href="/"
              className="text-white text-sm"
              >forget password?</a>
-           
+           <a href=""></a>
         </div>
     </div>
     )

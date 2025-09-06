@@ -1,174 +1,55 @@
-// import { useState } from "react"
-// import { useNavigate } from "react-router-dom"
-
-// const Registration = () => {
-//     return (
-//   const navigate = useNavigate()
-//   //step state
-//   const [step, setStep] = useState(1)
-
-//   const [error, setError] = useState("")
-
-// //   // Email registration handlers
-// //   const handleEmailNext = (e) => {
-// //     e.preventDefault()
-// //     if(!email) return setError("Please enter your email")
-// //      setError("")
-// //     setStep(2) 
-// //   };
-
-//   const handleUsernameNext = (e) => {
-//     e.preventDefault()
-//     if(!username || !password || !userType) return setError("Please fill all fields")
-//       setError("");
-//       setStep(3);
-//   }
-  
-//    const backRegistrationPage = (e) => {
-//     e.preventDefault()
-//       if(step === 1.5 ) setStep(1)
-//        if(step === 2) setStep(1.5)
-//         else if (step > 2 ) setStep(step - 1)
-//    }
-  
-//   // Step 1: choose registration method
-//   if (step === 1){
-//     return (
-//       <section className="flex items-center justify-center min-h-[85vh]  bg-white md:min-h-screen">
-//         <div className="bg-[#0077b6] p-8 rounded-[1rem] shadow-md w-full max-w-[95vw] md:max-w-md min-h-[350px]">
-//           <div className="flex flex-col items-center justify-center gap-4">
-//           <h2 className="text-2xl font-bold mb-6 text-center font-[cursive] text-white">Register to weidicJobs</h2>
-//          {error && <div className="text-red-500 mb-4">{error}</div>}
-//          <button
-//           onClick={handleGoogleRegister}
-//           className="flex items-center justify-center gap-2 bg-white border border-gray-300 text-gray-700 font-bold py-2 px-4 rounded-[2rem] w-full hover:bg-gray-100 mb-3">
-//             <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" className="w-5 h-5" />
-//             Register with Google
-//           </button>
-//           <button
-//             onClick={handleAppleRegister}
-//             className="flex items-center justify-center gap-2 bg-black text-white font-bold py-2 px-4 rounded-[2rem] w-full hover:bg-gray-900 mb-3"
-//           >
-//             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-//             <path d="M16.365 1.43c0 1.14-.93 2.07-2.07 2.07-.06 0-.12 0-.18-.01.01-.13.02-.26.02-.39 0-1.14.93-2.07 2.07-2.07.06 0 .12 0 .18.01-.01.13-.02.26-.02.39zm3.47 4.13c-1.87-2.23-5.09-2.01-6.37-2.01-1.28 0-4.5-.22-6.37 2.01-2.18 2.6-1.81 7.44 1.72 11.13 1.23 1.33 2.7 2.81 4.65 2.81 1.95 0 3.42-1.48 4.65-2.81 3.53-3.69 3.9-8.53 1.72-11.13zm-6.37 15.44c-1.13 0-2.25-.37-3.13-1.09-.25-.2-.29-.57-.09-.82.2-.25.57-.29.82-.09.7.56 1.62.87 2.4.87.78 0 1.7-.31 2.4-.87.25-.2.62-.16.82.09.2.25.16.62-.09.82-.88.72-2 .09-3.13 1.09z"/>
-//             </svg>
-//             Register with Apple
-//           </button>
-//           <button
-//            onClick={() => setStep(1.5)}
-//            className="bg-[#03045e] hover:bg-[#20228b] text-white font-bold py-2 px-4 rounded-[2rem] w-full"
-//           >
-//            Register with Email
-//           </button>
-//           </div>
-//         </div>
-//       </section>
-//     )
-//   }
-//   // step 1.5 Enter email
-//   if(step === 1.5){
-//     return (
-//       <section className="flex items-center justify-center min-h-[85vh] bg-white">
-//         <form onSubmit={handleEmailNext} className="bg-[#0077b6] flex flex-col items-center justify-center p-4 rounded-[2rem] shadow-md w-full max-w-[95vw] md:max-w-md min-h-[350px] mb-10">
-//           <h2 className="text-2xl font-bold mb-6 text-center text-white">Enter Your Email</h2>
-//           {error && <div className="text-red-500 mb-4">{error}</div> } 
-//           <input 
-//            type="email"
-//            className="border rounded-[2rem] w-full py-2 px-3 mb-4"
-//            placeholder="Email"
-//            value={email}
-//            onChange={e => setEmail(e.target.value)}
-//            required
-//            />
-//            <div className="flex justify-between mt-2 gap-4 ">
-//             <button onClick={backRegistrationPage}
-//              className="bg-[#03045e] hover:bg-[#20228b] text-white font-bold py-2 px-4 rounded-[2rem] lg:min-w-[10vw] min-w-[30vw]"> Back </button>
-//              <button className="bg-[#03045e] hover:bg-[#20228b] text-white font-bold py-2 px-4 rounded-[2rem] lg:min-w-[10vw] min-w-[30vw]" type="submit">
-//               Next
-//              </button>
-//            </div>
+import { FaArrowRight, FaArrowLeft, FaGoogle, FaApple } from "react-icons/fa";
+const Registration = () => {
+    return (
+        <div className="min-h-screen w-full relative flex flex-col items-center justify-center  bg-black">
+            <div className="w-full flex gap-5 justify-center items-center ">
+                <h1 className="text-white font-bold text-4xl border border-white rounded-lg p-1 px-4 cursor-pointer"><FaArrowLeft size={30}/></h1> 
+                <h1 className="text-3xl font-bold text-white"> Sign Up - wiedic</h1>
+            </div>    
+            <p className="text-sm m-5 text-gray-500 font-bold ">SignUp With any of The Following</p>
+        <div className="flex flex-col items-center w-[95%] max-w-md bg-black px-8 py-10 ">
+          <div className="flex justify-center items-center gap-5">
+            <FaGoogle className=" bg-gray-900 cursor-pointer text-white border rounded-lg border-white text-5xl w-32 p-2"/>
+            <FaApple className="text-white cursor-pointer border rounded-lg bg-gray-900 text-5xl w-32 p-2"/>
+          </div>  
+            <form 
+            className="flex flex-col w-full mt-10 gap-2">
+                <div className="flex flex-col gap-6">
+                   <div className="">
+                        <input 
+                        type="FirstName"
+                        name="FirstName"
+                        placeholder="FirstName"
+                        className="w-full border-b-2 text-white border-gray-200 focus:border-2 focus:border-pink-700 focus:outline-none px-3 py-2"
+                        />
+                    </div>    
+                    <div>
+                        <input 
+                        type="LastName"
+                        name="LastName"
+                        placeholder="LastName"
+                        className="w-full text-white border-b-2 border-gray-200 focus:border-2 focus:border-pink-700 focus:outline-none px-3 py-2"
+                        />
+                    </div>    
+                </div>
+                <button
+                  className="bg-pink-700 font-bold text-white text-[1.5rem] px-4 py-2 mt-12 m-auto rounded-lg w-56 hover:bg-white hover:text-pink-700 transition-all ease-in-out duration-300 cursor-pointer"
+                  type="submit"
+                >
+                <FaArrowRight size={30} className="text-center m-auto"/>
+                </button>
+            </form>
           
-//         </form>
-//       </section>
-//     )
-//   }
-//    // step 2: username, password, user type
-//    if(step === 2){
-//     return (
-//       <section className="flex items-center justify-center min-h-[85vh] bg-white">
-//         <form onSubmit={handleUsernameNext} className="bg-[#0077b6] flex flex-col items-center justify-center p-8 rounded-[2rem] shadow-md w-full max-w-[95vw] md:max-w-md min-h-[350px] mb-10">
-//           <h2 className="text-2xl font-bold mb-6 text-center text-white">Create Account</h2>
-//           {error && <div className="text-red-500 mb-4">{error}</div>}
-//           <input
-//             type="text"
-//             className="border rounded-[2rem] w-full py-2 px-3 mb-4"
-//             placeholder="Username"
-//             value={username}
-//             onChange={e => setUsername(e.target.value)}
-//             required
-//           /> 
-//              <input
-//             type="password"
-//             className="border rounded-[2rem] w-full py-2 px-3 mb-4"
-//             placeholder="Password"
-//             value={password}
-//             onChange={e => setPassword(e.target.value)}
-//             required
-//           />
 
-//             <select
-//             className="border rounded-[2rem] w-full py-2 px-3 mb-4"
-//             value={userType}
-//             onChange={e => setUserType(e.target.value)}
-//             required
-//             >
-//             <option value="">Are you looking for a job or hiring?</option>
-//             <option value="jobseeker">Looking for a job</option>
-//             <option value="employer">Employer / CEO</option>
-//           </select>
-//             <div className="flex justify-between mt-2 gap-4 ">
-//             <button onClick={backRegistrationPage}
-//              className="bg-[#03045e] hover:bg-[#20228b] text-white font-bold py-2 px-4 rounded-[2rem] lg:min-w-[10vw] min-w-[30vw]">
-//                Back 
-//                </button>
-//              <button className="bg-[#03045e] hover:bg-[#20228b] text-white font-bold py-2 px-4 rounded-[2rem] lg:min-w-[10vw] min-w-[30vw]" type="submit">
-//               Next
-//              </button>
-//            </div>
-//         </form>
-//       </section>
-//     )
-//    }
-   
-//   // Step 3
-//   if (step === 3) {
-//     return (
-//       <section className="flex items-center justify-center min-h-[85vh] bg-white">
-//         <form onSubmit={handleFinalSubmit} className="bg-[#0077b6] flex flex-col items-center justify-center p-8 rounded-[2rem] shadow-md w-full max-w-[95vw] md:max-w-md min-h-[350px] mb-10">
-//           <label htmlFor="" className="text-left text-white font-bold text-lg mb-2">Re-enter password</label>
-//           <input type="password" 
-//            className = "border rounded-[2rem] w-full py-2 px-3 mb-4"
-//            placeholder="re-enter password"
-//            value={confirmPassword}
-//            onChange={e => setConfirmPassword(e.target.value)}
-//            required
+        </div>
+        <div className="flex flex-col justify-center items-center gap-3 mt-3 p-5">
+           <p
+            to="/Registration"
+            className="text-gray-500 text-sm">
+           Already have an account? <a className="text-white">Log In</a></p> 
+        </div>
+    </div>
+    )
+}
 
-//           />
-//            <div className="flex justify-between mt-2 gap-4 ">
-//             <button onClick={backRegistrationPage}
-//              className="bg-[#03045e] hover:bg-[#20228b] text-white font-bold py-2 px-4 rounded-[2rem] lg:min-w-[10vw] min-w-[30vw]">
-//                Back 
-//                </button>
-//              <button className="bg-[#03045e] hover:bg-[#20228b] text-white font-bold py-2 px-4 rounded-[2rem] lg:min-w-[10vw] min-w-[30vw]" type="submit">
-//               Submit
-//              </button>
-//            </div>
-//          </form>
-//       </section>
-//     );
-//   }
-//     return null; // fallback if no step matches    
-//     )
-// }
-
-// export default Registration
+export default Registration
