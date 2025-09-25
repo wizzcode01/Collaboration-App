@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
     return (
-        <div className="min-h-screen w-full relative flex flex-col items-center justify-center  bg-gray-900">
+        <div className="min-h-screen overflow-hidden w-full relative flex flex-col items-center justify-center  bg-gray-900">
             <div className="w-full ml-14 lg:ml-0 lg:text-center ">
                 <h1 className="text-3xl font-bold text-[#7801b4] mb-6">Login - wieConnect</h1>
                 <p className="text-sm text-gray-500 font-bold ">Login With One of The Following</p>
