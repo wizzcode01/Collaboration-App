@@ -18,11 +18,11 @@ const Registration = () => {
     if(step === 1) {
       return (
         <div className="min-h-screen w-full relative flex flex-col items-center justify-center  bg-gray-900">
-            <div className="w-full ml-5 lg:ml-0 flex-col gap-5 justify-center items-center ">
+            <div className="w-full lg:ml-0 flex-col gap-5 justify-center items-center text-center">
                 {/* <h1 className="text-white font-bold  border border-white rounded-lg p-1 px-4 cursor-pointer" 
                  onClick={() => setStep(1)}
                 ><FaArrowLeft size={20}/></h1>  */}
-                <h1 className="text-2xl m-5 font-bold text-white"> Sign Up - wieConnect</h1>
+                <h1 className="text-3xl m-5 font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"> Sign Up - wieConnect</h1>
                 <p className="text-sm m-5 text-gray-500 font-bold ">SignUp With any of The Following</p>
             </div>    
           
@@ -74,7 +74,7 @@ const Registration = () => {
     return (
          <div className="min-h-screen w-full relative flex flex-col items-center justify-center  bg-gray-900">
             <div className="w-full flex gap-5 justify-center items-center ">
-                <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Wie-Connect</h1>
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Wie-Connect</h1>
             </div>    
            <div className="flex flex-col items-center w-[95%] max-w-md bg-gray-900 px-8 py-10 ">
             <form 

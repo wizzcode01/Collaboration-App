@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Login = () => {
     return (
         <div className="min-h-screen overflow-hidden w-full relative flex flex-col items-center justify-center  bg-gray-900">
-            <div className="w-full ml-14 lg:ml-0 lg:text-center ">
-                <h1 className="text-3xl font-bold text-white mb-6">Login - wieConnect</h1>
+            <div className="w-full lg:ml-0 text-center ">
+                <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-6">Login - wieConnect</h1>
                 <p className="text-sm text-gray-500 font-bold ">Login With One of The Following</p>
             </div>    
         <div className="flex flex-col items-center w-[95%] max-w-md bg-gray-900 px-8 py-10 ">
